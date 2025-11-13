@@ -73,6 +73,9 @@ header{
     background-position: right;
     background-size: contain;
     /* Styles were added here to arrange the content, I used flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* TO DO */
 }
 
@@ -136,6 +139,10 @@ nav ul{
     list-style-type: none;
     padding: 0;
     /* Styles were added here to arrange the content, I used flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     /* TO DO */
 }
 
@@ -147,6 +154,7 @@ nav a{
     text-decoration: none;
     font-family: var(--heading-fonts);
     letter-spacing: 1px;
+    position: relative;
 }
 
 nav a svg{
@@ -162,8 +170,12 @@ nav a svg{
 
 nav a span{
     display: block;
-    position: relative;
+    position: absolute;
     /* Styles were added here to arrange the content, I used top and z-index for this */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     /* TO DO */
 }
 
@@ -223,18 +235,30 @@ p{
     background-color: var(--wht);
     padding: 96px 32px;
     /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
     /* TO DO */
 }
 
 #plants h3, #plants > p{
     /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1 / -1;
+    text-align: center;
     /* TO DO */
 }
 
 #plants section{
     /* Styles were added here to arrange the content, I used flexbox */
-    /* TO DO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--lt-gray);
+    padding: 16px;
+    box-shadow: var(--box-shadow-sm);
     margin: 32px auto 0;
+    /* TO DO */
 }
 
 #plants h4{
@@ -243,6 +267,7 @@ p{
 
 #plants img{
     /* Styles were added here to arrange the content, I used a property for a flexbox child to change the order that the content appears on the page */
+    order: -1;
     /* TO DO */
     width: 100%;
     max-width: 400px;
@@ -264,12 +289,17 @@ p{
     color: var(--wht);
     padding: 64px 32px;
     /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
     /* TO DO */
 }
 
 /* Contact Heading and Paragraph */
 #contact h3, #contact > p{
     /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1 / -1;
+    text-align: center;
     /* TO DO */
 }
 
@@ -351,11 +381,17 @@ th:nth-of-type(even), td:nth-of-type(even){
     margin: 32px auto;
     list-style-type: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 /* Social Media List */
 #social ul{
     /* Styles were added here to arrange the content, I used grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     /* TO DO */
     width: fit-content;
     margin: 16px auto;
@@ -366,6 +402,8 @@ th:nth-of-type(even), td:nth-of-type(even){
 /* Heading for Social Media Section */
 #social h4{
     /* Styles were added here to arrange the content, these are grid children styles */
+    grid-column: 1 / -1;
+    text-align: center;
     /* TO DO */
 }
 
